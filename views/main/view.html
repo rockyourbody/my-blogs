@@ -1,0 +1,82 @@
+{% extends 'layout.html' %}
+
+{% block menu %}
+    <div class="menu">
+        <a href="/">首页</a>
+        <!-- 这里解释一下：为了得到点击“阅读全文”按钮后，随着页面跳转，导航栏效果也相应的
+        移动到对应分类上面，因此，先通过categories获取分类数据，进而获取分类的id；之后，
+        由于content内容部分中，存有对应分类的id，即category，因此判断两者相等时，即可设置
+        相应的导航栏效果 -->
+        {% for cate in categories %}
+        {% if content.category == cate.id %}
+        <a href="/?category={{cate.id}}" class="focus">{{cate.name}}</a>
+        {% else %}
+        <a href="/?category={{cate.id}}">{{cate.name}}</a>
+        {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="listBox">
+        <h1>{{content.title}}</h1>
+        <p class="colDefault">
+            作者：<span class="colInfo">{{content.user.username}}</span> -
+            时间：<span class="colInfo">{{content.addTime|date('Y年m月d日 H:i:s', -8*60)}}</span> -
+            阅读：<span class="colInfo">{{content.views}}</span> -
+            评论：<span class="colInfo">{{content.comments.length}}</span>
+        </p>
+        <dfn>{{content.content}}</dfn>
+    </div>
+
+    <!-- 评论部分 -->
+    <div class="listBox">
+        <div class="textReview clear">
+            <strong class="review">评论</strong>
+            {% if userInfo._id %}
+            <span class="em">
+                一共有
+                <em class="messageCount" id="messageCount"></em>
+                条评论
+            </span>
+            {% endif %}
+        </div>
+        
+        {% if userInfo._id %}
+        <div class="textUser">{{userInfo.username}}</div>
+        <div class="clear">
+            <textarea class="textarea" id="textarea"></textarea>
+            <!-- 加入一个隐藏域，其value值等于内容id -->
+            <input type="hidden" id="contentId" value="{{content.id}}">
+            <button class="submit" id="submit">提交</button>
+        </div>
+        {% else %}
+        <div class="warning">您还没有登录，请先登录！</div>
+        {% endif %}
+        
+        <div class="messageList">
+        </div>
+
+        <div class="pager">
+            <ul class="clear">
+                <li class="previous">
+                    <a href="">上一页</a>
+                </li>
+                <li></li>
+                <li class="next">
+                    <a href="">下一页</a>
+                </li>
+            </ul>
+        </div>
+        <!-- <div class="messageList">
+            <div class="messageBox">还没有留言</div>
+        </div> -->
+        <!-- <div class="messageList">
+            <div class="newReview">
+                <span class="fl">admin</span>
+                <span class="fr">2019年02月20日 20:13:33</span>
+            </div>
+            <div class="contentReview">哈哈哈按时发顺丰发粉色打法法师打发第三方的方法</div>
+        </div> -->
+    </div>
+{% endblock %}

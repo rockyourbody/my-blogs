@@ -1,0 +1,11 @@
+<nav>
+    <ul class="pager">
+        <!-- 这里需要用{{title}}来取代公共部分 -->
+        <!-- 原视频中有错 -->
+        <li class="previous"><a href="/admin/{{title}}?page={{page - 1}}">&larr; 上一页</a></li>
+        <li>
+            一共有{{count}}条数据，每页显示{{limit}}条数据，一共有{{pages}}页，当前第{{page}}页
+        </li>
+        <li class="next"><a href="/admin/{{title}}?page={{page + 1}}">下一页 &larr;</a></li>
+    </ul>
+</nav>

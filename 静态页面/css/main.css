@@ -1,0 +1,273 @@
+/* 全局部分 */
+body {
+    margin: 0 auto;
+    background: #ebebeb;
+    font-family: '微软雅黑';
+    font-size: 14px;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+button {
+    border:none;
+}
+.clear{
+    *zoom: 1;
+}
+.clear::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.colDefault {
+    color: #515151;
+}
+.colInfo {
+    color: #46b9d8;
+}
+.colDark {
+    color: #363c40;
+  }
+.colDanger {
+    color: #f76447;
+}
+.textRight{
+    text-align: right;
+}
+
+/* 头部 */
+header {
+    height: 222px;
+    position: relative;
+    overflow: hidden;
+}
+header .backimg {
+    width: 100%;
+    height: 100%;
+}
+header .backimg img{
+    margin: 0 auto;
+    display: block;
+}
+header .logo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+}
+header .logo img {
+    display: inline-block;
+    padding-top: 60px;
+}
+
+/* 导航 */
+nav{
+    height: 56px;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 2px solid #e1e1e1;
+    background: #fff;
+}
+nav .menu{
+    text-align: center;
+}
+nav .menu a{
+    display: inline-block;
+    padding: 0px 20px;
+    height: 56px;
+    line-height: 56px;
+    text-decoration: none;
+    color:#000;
+}
+nav .menu a:hover, nav .menu a.focus {
+    margin-bottom: -2px;
+    border-bottom: 2px solid #e67e22;
+}
+
+/* 主体部分 */
+main{
+    width: 1140px;
+    margin: 35px auto 0px;
+}
+
+/* 主体左侧部分 */
+main .mainLeft{
+    width: 750px;
+    float: left;
+}
+main .mainLeft .listBox{
+    background: #fff;
+    padding: 20px 35px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+main .mainLeft .listBox .function{
+    padding: 10px 0px;
+    text-align: left;
+}
+main .mainLeft .listBox .function a {
+    display: inline-block;
+    background: #e67e22;
+    text-align: center;
+    width: 100px;
+    height: 34px;
+    line-height: 34px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 12px;
+    font-family: '微软雅黑';
+    text-decoration: none;
+}
+
+/* 评论部分 */
+.listBox .textReview{
+    height: 30px;
+}
+.listBox .textUser{
+    height: 30px;
+    text-align: left;
+}
+.listBox .review{
+    float: left;
+}
+.listBox .textReview .em{
+    float: right;
+    font-size: 12px;
+}
+.listBox .textarea{
+    float: left;
+    padding: 11px;
+    margin-bottom: 20px;
+    width: 580px;
+    height: 48px;
+    border: 1px solid #1F89bf;
+}
+.listBox .submit{
+    float: left;
+    width: 76px;
+    height: 72px;
+    background: #1F89bf;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.listBox .warning{
+  background: #e67e22;
+  width: 100%;
+  height: 30px;
+  line-height:30px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 12px;
+  font-family: '微软雅黑';
+}
+.listBox .messageList{
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+.listBox .messageBox{
+    line-height: 30px;
+    text-align: left;
+}
+.listBox .newReview{
+    margin-bottom: 7px;
+    overflow: hidden;
+}
+.listBox .newReview .fl{
+    float: left;
+}
+.listBox .newReview .fr{
+    float: right;
+}
+.listBox .contentReview{
+    text-align: left;
+    margin-bottom: 30px;
+}
+/* 翻页导航栏 */
+.pager {
+    padding: 20px;
+    background: #fff;
+}
+.pager ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.pager ul li {
+    display: inline;
+}
+.pager ul li a {
+    text-decoration: none;
+    color: #333;
+}
+.pager .previous{
+    float: left;
+}
+.pager .next{
+    float: right;
+}
+
+/* 主体右侧部分 */
+main .mainRight{
+    width: 360px;
+    float: right;
+}
+main .mainRight .rightBox{
+    background: #fff;
+    padding: 16px 30px;
+    margin-bottom: 30px;
+}
+main .mainRight .rightBox .title {
+    border-bottom: 1px solid #ebebeb;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+main .mainRight .rightBox .title span {
+    display: inline-block;
+    margin-bottom: -1px;
+    height: 36px;
+    line-height: 36px;
+    border-bottom: 1px solid #e67e22;
+    padding: 0px 20px 0px 0px;
+}
+main .mainRight .rightBox button {
+    background: #e67e22;
+    width: 100%;
+    height: 34px;
+    cursor: pointer;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 12px;
+    font-family: '微软雅黑';
+}
+main .mainRight .rightBox .line {
+    margin-bottom: 10px;
+    position: relative;
+}
+main .mainRight .rightBox .line span {
+    width: 60px;
+    display: inline-block;
+    text-align: right;
+}
+main .mainRight .rightBox .line input {
+    width: 210px;
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid #ddd;
+    background: none;
+    padding: 0px 5px;
+}
+main .mainRight .rightBox .line button {
+    background: #e67e22;
+    width: 222px;
+    height: 34px;
+    cursor: pointer;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 12px;
+    font-family: '微软雅黑';
+}

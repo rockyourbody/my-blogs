@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>博客</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/fontAwesome/css/font-awesome.min.css" type="text/css">
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="backimg"><img src="images/IMG_0293.jpg"></div>
+        <div class="logo"><img src="images/00002637.png"></div>
+    </header>
+    <!-- 导航 -->
+    <nav>
+        <div class="menu">
+            <a href="javascript:;" class="focus">首页</a>
+            <a href="javascript:;">HTML5</a>
+            <a href="javascript:;">CSS</a>
+            <a href="javascript:;">JAVASCRIPT</a>
+            <a href="javascript:;">PHP</a>
+            <a href="javascript:;">JAVA</a>
+            <a href="javascript:;">Express</a>
+        </div>
+    </nav>
+    <!-- 主体 -->
+    <main class="clear">
+        <!-- 主体左侧部分 -->
+        <div class="mainLeft">
+            <div class="listBox">
+                <h1>天王盖地虎</h1>
+                <p class="colDefault">
+                    作者：<span class="colInfo">admin</span> -
+                    时间：<span class="colInfo">2019年1月1日 8:12:34</span> -
+                    阅读：<span class="colInfo">213</span> -
+                    评论：<span class="colInfo">12</span>
+                </p>
+                <dfn><p>脸怎么红了？容光焕发，怎么又白了？防冷涂的蜡</p></dfn>
+                <div class="function"><a href="javascript:;">阅读全文</a></div>
+            </div>
+            <div class="listBox">
+                <h1>宝塔镇河妖</h1>
+                <p class="colDefault">
+                    作者：<span class="colInfo">admin</span> -
+                    时间：<span class="colInfo">2019年1月1日 7:17:37</span> -
+                    阅读：<span class="colInfo">323</span> -
+                    评论：<span class="colInfo">11</span>
+                </p>
+                <dfn><p>脸怎么红了？娶不到媳妇急的，怎么又白了？娶了个母老虎吓的</p></dfn>
+                <div class="function"><a href="javascript:;">阅读全文</a></div>
+            </div>
+            <div class="listBox">
+                <h1>DOM</h1>
+                <p class="colDefault">
+                    作者：<span class="colInfo">admin</span> -
+                    时间：<span class="colInfo">2019年1月1日 12:27:32</span> -
+                    阅读：<span class="colInfo">123</span> -
+                    评论：<span class="colInfo">22</span>
+                </p>
+                <dfn>
+                    <h2>DOM - Document Object Model</h2>
+                    <blockquote>
+                        <p>文档对象模型</p>
+                    </blockquote>
+                </dfn>
+                <div class="function"><a href="javascript:;">阅读全文</a></div>
+            </div>
+            <!-- 评论部分 -->
+            <div class="listBox">
+                <div class="textReview clear">
+                    <strong class="review">评论</strong>
+                    <span class="em">
+                        一共有
+                        <em class="messageCount">0</em>
+                        条评论
+                    </span>
+                </div>
+                <div class="textUser">aaaaa</div>
+                <div class="clear">
+                    <textarea class="textarea"></textarea>
+                    <button class="submit">提交</button>
+                </div>
+                <div class="warning">您还没有登录，请先登录！</div>
+                <div class="messageList">
+                    <div class="messageBox">还没有留言</div>
+                </div>
+                <div class="messageList">
+                    <div class="newReview">
+                        <span class="fl">admin</span>
+                        <span class="fr">2019年02月20日 20:13:33</span>
+                    </div>
+                    <div class="contentReview">哈哈哈按时发顺丰发粉色打法法师打发第三方的方法</div>
+                </div>
+            </div>
+            <!-- 翻页导航栏 -->
+            <div class="pager">
+                <ul>
+                    <li class="previous">
+                        <a href="javascript:;">上一页</a>
+                    </li>
+                    <li>
+                        <strong>1 / 2</strong>
+                    </li>
+                    <li class="next">
+                        <a href="javascript:;">下一页</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 主体右侧部分 -->
+        <div class="mainRight">
+            <!-- 管理员 -->
+            <div class="rightBox">
+                <div class="title">
+                    <span>用户信息</span>
+                </div>
+                <p><span class="colDark">admin</span></p>
+                <p><span class="colDanger">你好，管理员，<a href="javascript:;">你可以点击这里进入管理</a></span></p>
+                <p><span class="colDark"><a href="javascript:;">退出</a></span></p>
+            </div>
+            <!-- 登录 -->
+            <div class="rightBox" id="loginBox">
+                <div class="title"><span>登录</span></div>
+                <div class="line"><span class="colDark">用户名：</span><input type="text"></div>
+                <div class="line"><span class="colDark">密码：</span><input type="password"></div>
+                <div class="line"><span class="colDark"></span><button>登 录</button></div>
+                <p class="textRight">还没注册？<a href="javascript:;" class="colMint">马上注册</a></p>
+            </div>
+            <!-- 注册 -->
+            <div class="rightBox" id="registerBox">
+                <div class="title"><span>注册</span></div>
+                <div class="line"><span class="colDark">用户名：</span><input type="text"></div>
+                <div class="line"><span class="colDark">密码：</span><input type="password"></div>
+                <div class="line"><span class="colDark">确认：</span><input type="password"></div>
+                <div class="line"><span class="colDark"></span><button>注 册</button></div>
+                <p class="textRight">已有账号？<a href="javascript:;" class="colMint">马上登录</a></p>
+            </div>
+            <!-- 社区 -->
+            <div class="rightBox">
+                <div class="title"><span>社区</span></div>
+                <p>天王盖地虎</p>
+                <p>宝塔镇河妖</p>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/index.js"></script>
+</html>

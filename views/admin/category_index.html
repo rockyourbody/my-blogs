@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+<!-- 路径导航，俗称面包屑导航 -->
+<ol class="breadcrumb">
+    <li><a href="/">管理首页</a></li>
+    <li><span>分类列表</span></li>
+</ol>
+<!-- 用一个表格的形式展示用户信息 -->
+<h3>分类列表</h3>
+
+{% include 'page.html' %}
+
+<table class="table table-hover table-striped">
+    <tr>
+        <th>ID</th>
+        <th>分类名称</th>
+        <th>操作</th>
+    </tr>
+    
+    {% for category in categories %}
+    <tr>
+        <td>{{category._id.toString()}}</td>
+        <td>{{category.name}}</td>
+        <td>
+            <a href="/admin/category/edit?id={{category._id.toString()}}">修改</a> |
+            <a href="/admin/category/delete?id={{category._id.toString()}}">删除</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<!-- 通过include方法引入 -->
+{% include 'page.html' %}
+{% endblock %}
